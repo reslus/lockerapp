@@ -1,0 +1,22 @@
+{
+  "name": "lockerapp",
+  "version": "1.0.0",
+  "description": "locker registration app",
+  "main": "functions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reslus/lockerapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reslus/lockerapp/issues"
+  },
+  "homepage": "https://github.com/reslus/lockerapp#readme",
+  "dependencies": {
+    "sweetalert": "^2.1.0"
+  }
+}

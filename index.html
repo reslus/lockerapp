@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Locker App</title>
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary d-flex justify-content-between p-3">
+      <a class="navbar-brand" href="#">Locker App</a>
+
+      <div class="d-flex">
+        <div class="btn btn-outline-dark mr-3">
+          LOGIN
+        </div>
+        <div class="btn btn-outline-dark">
+          SIGN UP
+        </div>
+      </div>
+
+    </nav>
+
+    <!-- Main Body -->
+    <main class="mx-auto mt-5 w-25 p-3 border border-dark rounded">
+
+      <div class="form-container d-flex justify-content-between ">
+        <form class="" action="index.html" method="post">
+          <div class="mb-3">
+            <h3 class="mb-4"> Please Choose a Campus:</h3>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="surrey" class="custom-control-input" name="campusChoice">
+              <label class="custom-control-label" for="surrey">Surrey</label>
+            </div>
+
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="richmond" class="custom-control-input" name="campusChoice">
+              <label class="custom-control-label" for="richmond">Richmond</label>
+            </div>
+
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="langley" class="custom-control-input" name="campusChoice">
+              <label class="custom-control-label" for="langley">Langley</label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h3 class="mb-4">Please Choose a Buidling:</h3>
+            <!-- Surrey -->
+            <div class="mb-3">
+              <div class="custom-control custom-radio custom-control-inline" >
+                <input type="radio" id="cedar" name="buildingChoice" class="custom-control-input">
+                <label class="custom-control-label" for="cedar">Cedar Building</label>
+              </div>
+
+              <div class="custom-control custom-radio custom-control-inline" >
+                <input type="radio" id="fir" name="buildingChoice" class="custom-control-input">
+                <label class="custom-control-label" for="fir">Fir Building</label>
+              </div>
+            </div>
+
+            <!-- Richmond -->
+            <div class="mb-3">
+              <div class="custom-control custom-radio custom-control-inline" >
+                <input type="radio" id="main" name="buildingChoice" class="custom-control-input">
+                <label class="custom-control-label" for="main">Main Building</label>
+              </div>
+
+              <div class="custom-control custom-radio custom-control-inline" >
+                <input type="radio" id="design"name="buildingChoice" class="custom-control-input">
+                <label class="custom-control-label" for="design">Design Building</label>
+              </div>
+            </div>
+
+            <!-- Langley -->
+            <div class="mb-3">
+              <div class="custom-control custom-radio custom-control-inline" >
+                <input type="radio" id="south"name="buildingChoice" class="custom-control-input">
+                <label class="custom-control-label" for="south">South (Nursing) Building</label>
+              </div>
+
+              <div class="custom-control custom-radio custom-control-inline" >
+                <input type="radio" id="east"name="buildingChoice" class="custom-control-input">
+                <label class="custom-control-label" for="east">East Building</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floor -->
+          <div class="mb-3">
+            <h3 class="mb-4">Please choose a Floor:</h3>
+
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="first"name="buildingChoice" class="custom-control-input">
+              <label class="custom-control-label" for="first">First Floor</label>
+            </div>
+
+            <div class="custom-control custom-radio custom-control-inline" >
+              <input type="radio" id="second" name="buildingChoice" class="custom-control-input">
+              <label class="custom-control-label" for="second">2nd Floor</label>
+            </div>
+          </div>
+
+
+
+          <div class="mt-5">
+            <p class="btn btn-primary"name="button" onclick="alertTest()">Apply</p>
+          </div>
+
+        </form>
+      </div>
+
+    </main>
+    <script type="text/javascript" src="functions.js"></script>
+  </body>
+</html>
