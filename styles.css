@@ -9,6 +9,10 @@ main {
   background: #ffffff;
 }
 
+#surreyBuildings, #richmondBuildings, #langleyBuildings, #questionBuilding, #questionFloor, #fillerFloor, #applyButton {
+  display: none;
+}
+
 /* form-container {
   font-size
 } */
