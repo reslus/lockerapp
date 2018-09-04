@@ -1,38 +1,35 @@
-function alertTest () {
-  swal("Awesome!", "Confirmation will be sent to your email", "success");
+function successAlert () {
+  swal("Awesome!", "Confirmation will be sent to your email.", "success");
+};
+
+function errorAlert(){
+  swal("Oops!", "Something went wrong. Please talk to member services.", "error");
 };
 
 // showBuilding functions
 
 function showSurreyBuildings() {
-  $("#richmondBuildings").hide();
-  $("#langleyBuildings").hide();
+  $("#richmondBuildings, #langleyBuildings").hide();
 
-  $("#questionBuilding").show();
-  $("#surreyBuildings").show();
+  $("#questionBuilding, #surreyBuildings").show();
 };
 
 function showRichmondBuildings() {
-  $("#surreyBuildings").hide();
-  $("#langleyBuildings").hide();
+  $("#surreyBuildings, #langleyBuildings").hide();
 
-  $("#questionBuilding").show();
-  $("#richmondBuildings").show();
+  $("#questionBuilding, #richmondBuildings").show();
 };
 
 function showLangleyBuildings() {
-  $("#richmondBuildings").hide();
-  $("#surreyBuildings").hide();
+  $("#richmondBuildings, #surreyBuildings").hide();
 
-  $("#questionBuilding").show();
-  $("#langleyBuildings").show();
+  $("#questionBuilding, #langleyBuildings").show();
 };
 
 // showFillerFloor function
 
 function showFillerFloor () {
-  $("#questionFloor").show();
-  $("#fillerFloor").show();
+  $("#questionFloor, #fillerFloor").show();
 };
 
 // showButton function

@@ -34,50 +34,54 @@
     <main class="mx-auto mt-5 w-50 p-3 border border-dark rounded">
 
       <div class="form-container d-flex justify-content-between ">
-        <form class="" action="index.html" method="post">
+        <form class="registrationForm" action="index.html" method="POST">
+
           <div class="mb-3">
+
             <h3 class="mb-4"> Please Choose a Campus:</h3>
             <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="surrey" class="custom-control-input" name="campusChoice" onclick="showSurreyBuildings()">
+              <input type="radio" id="surrey" class="custom-control-input" name="campusChoice" onclick="showSurreyBuildings()" value="surrey">
               <label class="custom-control-label" for="surrey">Surrey</label>
             </div>
 
             <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="richmond" class="custom-control-input" name="campusChoice" onclick="showRichmondBuildings()">
+              <input type="radio" id="richmond" class="custom-control-input" name="campusChoice" onclick="showRichmondBuildings()" value="richmond">
               <label class="custom-control-label" for="richmond">Richmond</label>
             </div>
 
             <div class="custom-control custom-radio custom-control-inline">
               <input type="radio" id="langley" class="custom-control-input" name="campusChoice"
-              onclick="showLangleyBuildings()">
+              onclick="showLangleyBuildings()" value="langley">
               <label class="custom-control-label" for="langley">Langley</label>
             </div>
           </div>
 
           <div class="mb-3">
+
             <h3 class="mb-4" id="questionBuilding">Please Choose a Buidling:</h3>
             <!-- Surrey -->
             <div class="mb-3" id="surreyBuildings">
               <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="cedar" name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()">
+                <input type="radio" id="cedar" name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()" value="cedar">
                 <label class="custom-control-label" for="cedar">Cedar Building</label>
               </div>
 
               <div class="custom-control custom-radio custom-control-inline" >
-                <input type="radio" id="fir" name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()">
+                <input type="radio" id="fir" name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()" value="fir">
                 <label class="custom-control-label" for="fir">Fir Building</label>
               </div>
+
             </div>
 
             <!-- Richmond -->
             <div class="mb-3" id="richmondBuildings">
               <div class="custom-control custom-radio custom-control-inline" >
-                <input type="radio" id="main" name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()">
+                <input type="radio" id="main" name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()" value="main">
                 <label class="custom-control-label" for="main">Main Building</label>
               </div>
 
               <div class="custom-control custom-radio custom-control-inline" >
-                <input type="radio" id="design"name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()">
+                <input type="radio" id="design"name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()" value="design">
                 <label class="custom-control-label" for="design">Design Building</label>
               </div>
             </div>
@@ -85,40 +89,42 @@
             <!-- Langley -->
             <div class="mb-3" id="langleyBuildings">
               <div class="custom-control custom-radio custom-control-inline" >
-                <input type="radio" id="south"name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()">
+                <input type="radio" id="south" name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()" value="south">
                 <label class="custom-control-label" for="south">South (Nursing) Building</label>
               </div>
 
               <div class="custom-control custom-radio custom-control-inline" >
-                <input type="radio" id="east"name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()">
+                <input type="radio" id="east" name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()" value="east">
                 <label class="custom-control-label" for="east">East Building</label>
               </div>
+
             </div>
+
           </div>
 
           <!-- Floor -->
           <div class="mb-3">
+
             <h3 class="mb-4" id="questionFloor">Please choose a Floor:</h3>
 
             <div class="" id="fillerFloor">
 
               <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="first"name="floorChoice" class="custom-control-input" onclick="showApplyButton()">
+                <input type="radio" id="first" name="floorChoice" class="custom-control-input" onclick="showApplyButton()" value="first">
                 <label class="custom-control-label" for="first">First Floor</label>
               </div>
 
               <div class="custom-control custom-radio custom-control-inline" >
-                <input type="radio" id="second" name="floorChoice" class="custom-control-input" onclick="showApplyButton()">
+                <input type="radio" id="second" name="floorChoice" class="custom-control-input" onclick="showApplyButton()" value="second">
                 <label class="custom-control-label" for="second">2nd Floor</label>
               </div>
 
             </div>
+
           </div>
 
-
-
-          <div class="mt-5" id="applyButton">
-            <p class="btn btn-primary"name="button" onclick="alertTest()">Apply</p>
+          <div class="mt-5">
+            <button class="btn btn-primary" id="applyButton">Apply</button>
           </div>
 
         </form>
@@ -127,5 +133,40 @@
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="functions.js"></script>
+    <script type="text/javascript">
+
+      $(function (){
+
+        $("#applyButton").on('click', function () {
+
+          var $campus = $("input[name=campusChoice]:checked");
+          var $building = $("input[name=buildingChoice]:checked");
+          var $floor = $("input[name=floorChoice]:checked");
+
+          var lockerChoice = {
+            campus: $campus.val(),
+            building: $building.val(),
+            floor: $floor.val()
+          };
+
+          console.log(lockerChoice);
+
+          $.ajax({
+            type:'POST',
+            success: function(lockerChoice) {
+              // console.log(lockerChoice);
+              successAlert();
+            },
+            error: function(){
+              errorAlert();
+            }
+
+          });
+
+          event.preventDefault();
+        })
+
+      });
+    </script>
   </body>
 </html>
