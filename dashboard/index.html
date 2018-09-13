@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Locker App</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary d-flex justify-content-between p-3">
+      <a class="navbar-brand" href="#">Locker App</a>
+
+      <div class="d-flex">
+        <div class="btn btn-outline-dark mr-3">
+          LOGIN
+        </div>
+        <div class="btn btn-outline-dark">
+          SIGN UP
+        </div>
+      </div>
+
+    </nav>
+
+    <header class="mt-5 text-center">
+      <h1>Your Locker Statistics</h1>
+      <h3>All Campuses:</h3>
+    </header>
+
+    <main class="mx-auto mt-3 d-flex justify-content-around">
+      <div class="card m-5" style="width: 18rem;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Total Lockers:</h5>
+          <p class="card-text">1234</p>
+          <a href="#" class="btn btn-primary">View Reports</a>
+        </div>
+      </div>
+
+      <div class="card m-5" style="width: 18rem;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Available Lockers</h5>
+          <p class="card-text">345</p>
+          <a href="#" class="btn btn-primary">View Reports</a>
+        </div>
+      </div>
+
+      <div class="card m-5" style="width: 18rem;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Taken Lockers</h5>
+          <p class="card-text">889</p>
+          <a href="#" class="btn btn-primary">View Reports</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Main Body -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/functions.js"></script>
+    <script type="text/javascript">
+
+      // $(function (){
+      //
+      //   $.ajax({
+      //     type:'POST',
+      //     success: function(lockerChoice) {
+      //       successAlert();
+      //     },
+      //     error: function(){
+      //       errorAlert();
+      //     }
+      //
+      //   });
+
+        event.preventDefault();
+      })
+    </script>
+  </body>
+</html>
