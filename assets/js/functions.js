@@ -9,27 +9,31 @@ function errorAlert(){
 // showBuilding functions
 
 function showSurreyBuildings() {
+  hideFillerFloor();
   $("#richmondBuildings, #langleyBuildings").hide();
-
   $("#questionBuilding, #surreyBuildings").show();
 };
 
 function showRichmondBuildings() {
+  hideFillerFloor();
   $("#surreyBuildings, #langleyBuildings").hide();
-
   $("#questionBuilding, #richmondBuildings").show();
 };
 
 function showLangleyBuildings() {
+  hideFillerFloor();
   $("#richmondBuildings, #surreyBuildings").hide();
-
   $("#questionBuilding, #langleyBuildings").show();
 };
 
-// showFillerFloor function
+// showFillerFloor & hide function
 
 function showFillerFloor () {
   $("#questionFloor, #fillerFloor").show();
+};
+
+function hideFillerFloor () {
+  $("#questionFloor, #fillerFloor").hide();
 };
 
 // showButton function

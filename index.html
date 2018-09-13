@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Locker App</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
 
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -37,6 +37,12 @@
         <form class="registrationForm" action="index.html" method="POST">
 
           <div class="mb-3">
+            <!-- flush out student email and add checks. Use regex? -->
+            <div class="form-group">
+              <label for="studentEmail">Email</label>
+              <input type="email" class="form-control" id="studentEmail" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">Please enter your <span class="kpuStyling">KPU</span>email.</small>
+            </div>
 
             <h3 class="mb-4"> Please Choose a Campus:</h3>
             <div class="custom-control custom-radio custom-control-inline">
@@ -132,18 +138,20 @@
 
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="functions.js"></script>
+    <script type="text/javascript" src="/assets/js/functions.js"></script>
     <script type="text/javascript">
 
       $(function (){
 
         $("#applyButton").on('click', function () {
-
+          // sends info to back-end
+          var $email = $("#studentEmail");
           var $campus = $("input[name=campusChoice]:checked");
           var $building = $("input[name=buildingChoice]:checked");
           var $floor = $("input[name=floorChoice]:checked");
 
           var lockerChoice = {
+            email: $email.val(),
             campus: $campus.val(),
             building: $building.val(),
             floor: $floor.val()
@@ -154,7 +162,6 @@
           $.ajax({
             type:'POST',
             success: function(lockerChoice) {
-              // console.log(lockerChoice);
               successAlert();
             },
             error: function(){

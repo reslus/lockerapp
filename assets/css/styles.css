@@ -13,6 +13,7 @@ main {
   display: none;
 }
 
-/* form-container {
-  font-size
-} */
+.kpuStyling {
+  color:#7d3140;
+  font-weight:bold;
+}
