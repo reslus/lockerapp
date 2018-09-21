@@ -41,7 +41,7 @@
             <div class="form-group">
               <label for="studentEmail">Email</label>
               <input type="email" class="form-control" id="studentEmail" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">Please enter your <span class="kpuStyling">KPU</span>email.</small>
+              <small id="emailHelp" class="form-text text-muted">Please enter your <span class="kpuStyling">KPU</span> email.</small>
             </div>
 
             <h3 class="mb-4"> Please Choose a Campus:</h3>
@@ -104,6 +104,11 @@
                 <label class="custom-control-label" for="east">East Building</label>
               </div>
 
+              <div class="custom-control custom-radio custom-control-inline" >
+                <input type="radio" id="west" name="buildingChoice" class="custom-control-input" onclick="showFillerFloor()" value="west">
+                <label class="custom-control-label" for="west">West Building</label>
+              </div>
+
             </div>
 
           </div>
@@ -113,7 +118,7 @@
 
             <h3 class="mb-4" id="questionFloor">Please choose a Floor:</h3>
 
-            <div class="" id="fillerFloor">
+            <div id="fillerFloor">
 
               <div class="custom-control custom-radio custom-control-inline">
                 <input type="radio" id="first" name="floorChoice" class="custom-control-input" onclick="showApplyButton()" value="first">
